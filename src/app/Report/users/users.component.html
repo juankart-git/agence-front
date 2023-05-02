@@ -1,0 +1,33 @@
+
+  <div class="container text-center">
+    <div class="card bg-light" style="width: 70%;">
+      <br><br>
+      <div class="card-body">
+        <h5 class="card-title">Consultor</h5>
+        <table id="mytable" class=" table  table-sm" cellspacing="0" width="100%">
+          <thead>
+            <tr>
+              <th scope="col">Nombre</th>
+              <th> Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+              <td scope="row" class="fs-6 text">{{user.name}}</td>
+              <td class="text-right">
+                <div class="container-md" style="border: 2px;">
+                  <button type="button" class="btn btn-outline-primary btn-sm" (click)="Relatorio(user)">Relatorio</button> &nbsp;                
+                </div>
+              </td>
+            </tr>          
+          </tbody>
+        </table>      
+        <div>
+          <button type="button" class="btn btn-outline-primary btn-sm" (click)="Grafica()">Grafica</button> &nbsp;
+          <button type="button" class="btn btn-outline-primary btn-sm" (click)="Pizza()">Pizza</button>
+        </div>
+      </div>
+      <br><br>
+    </div>
+  </div>
+  

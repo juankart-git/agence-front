@@ -1,0 +1,55 @@
+<br>
+<div class="container text-center ">
+    <div class="card bg-light" style="width: 70%;">
+        <table id="mytable" class=" table  table-sm" cellspacing="0" width="100%">
+            <thead>
+                <tr style="cellpading:10px">
+                    <th scope="col" class="text-center"><br><label> {{userName}}<br></label><br></th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Periodo</th>
+                                <th>Receita Líquida</th>
+                                <th>Custo Fixo</th>
+                                <th>Comissão</th>
+                                <th>Lucro</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let user of userData">
+                                <td scope="row" class="fs-6 text">{{user.period}}</td>
+                                <td scope="row" class="fs-6 text">{{user.netEarningsFormat}}</td>
+                                <td scope="row" class="fs-6 text">{{user.costFixedFormat}}</td>
+                                <td scope="row" class="fs-6 text">{{user.commissionFormat}}</td>
+                                <td scope="row" class="fs-6 text">{{user.profitFormat}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="fs-6 text">SALDO</th>
+                                <th scope="row" class="fs-6 text"><label class="number">{{saldoFormat}}</label></th>
+                                <th scope="row" class="fs-6 text"><label class="number">{{saldoGastoFormat}}</label>
+                                </th>
+                                <th scope="row" class="fs-6 text"><label class="number">{{saldoComisionFormat}}</label>
+                                </th>
+                                <th scope="row" class="fs-6 text"><label class="number">{{saldoLucroFormat}}</label>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </tr>
+
+            </tbody>
+        </table>
+
+        <div>
+            <button type="button" class="btn btn-outline-primary btn-sm" (click)="Report()">Começar</button> &nbsp;
+        </div>
+        <br>
+
+    </div>
+</div>
